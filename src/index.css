@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode colors */
+    --macaron-pink: #FFB6C1;
+    --macaron-mint: #98FF98;
+    --macaron-lavender: #DCD0FF;
+    --macaron-yellow: #FFE5B4;
+    --macaron-blue: #ADD8E6;
+
+    /* Text colors with higher contrast */
+    --macaron-pink-text: #D84B6B;
+    --macaron-mint-text: #2D8A4E;
+    --macaron-lavender-text: #6B46C1;
+    --macaron-yellow-text: #B45309;
+    --macaron-blue-text: #1E40AF;
+
+    /* Light theme base colors */
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262.1 83.3% 57.8%;
+  }
+
+  .dark {
+    /* Dark mode colors */
+    --macaron-pink: #FF69B4;
+    --macaron-mint: #4ADE80;
+    --macaron-lavender: #A78BFA;
+    --macaron-yellow: #FBBF24;
+    --macaron-blue: #60A5FA;
+
+    /* Dark mode text colors */
+    --macaron-pink-text: #FFB6C1;
+    --macaron-mint-text: #BBFFD3;
+    --macaron-lavender-text: #E9D5FF;
+    --macaron-yellow-text: #FDE68A;
+    --macaron-blue-text: #BFDBFE;
+
+    /* Dark theme base colors */
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 263.4 70% 50.4%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 263.4 70% 50.4%;
+  }
+}
+
+/* Theme transitions */
+.theme-transition {
+  @apply transition-colors duration-200;
+}
+
+/* Scrollbar styles */
+.scrollbar-light::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scrollbar-light::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.scrollbar-light::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 3px;
+}
+
+.scrollbar-light::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+
+.scrollbar-dark::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scrollbar-dark::-webkit-scrollbar-track {
+  background: #2d3748;
+  border-radius: 3px;
+}
+
+.scrollbar-dark::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 3px;
+}
+
+.scrollbar-dark::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}
+
+/* Text shadow for better readability on images */
+.text-shadow {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-sm {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+/* Card styles */
+.card {
+  @apply rounded-lg shadow-sm hover:shadow-md transition-shadow;
+}
+
+.dark .card {
+  @apply bg-gray-800;
+}
+
+/* Button styles */
+.btn {
+  @apply rounded-lg font-medium transition-colors;
+}
+
+.btn:focus {
+  @apply outline-none ring-0;
+}
+
+.btn:focus-visible {
+  @apply outline-none ring-0;
+}
+
+.dark .btn {
+  @apply text-white;
+}
+
+/* 3D perspective for card animations */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Custom utilities */
+@layer utilities {
+  .bg-theme {
+    @apply bg-opacity-10;
+  }
+}
